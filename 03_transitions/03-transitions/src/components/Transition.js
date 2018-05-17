@@ -22,7 +22,18 @@ class TransitionComp extends Component{
                     in={this.state.show}
                     timeout={{
                         enter:2000,
-                        exit: 50}}    
+                        exit: 2000}}
+                        
+                    enter={true}
+                    exit={true}
+
+                    onEnter={(node) => {
+                        console.log('Enter')
+                    }}
+
+                    onExit={(node) => {
+                        console.log('Exited')
+                    }}
                     >
                     { state => 
                         <div className={`square square-${state}`}> 
